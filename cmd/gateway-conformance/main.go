@@ -78,8 +78,8 @@ func main() {
 	var verbose bool
 
 	app := &cli.App{
-		Name:  "gateway-conformance",
-		Usage: "Tooling for the gateway test suite",
+		Name:    "gateway-conformance",
+		Usage:   "Tooling for the gateway test suite",
 		Version: tooling.Version,
 		Commands: []*cli.Command{
 			{

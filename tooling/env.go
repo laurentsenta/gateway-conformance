@@ -7,7 +7,7 @@ import (
 )
 
 var (
-    Version = "dev"
+	Version = "dev"
 )
 
 func Home() string {
