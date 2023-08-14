@@ -1,0 +1,12 @@
+baseURL = "https://sk1.jsiu.dev"
+theme   = "sk1"
+title   = "SK1"
+
+[Params]
+mainSections = "post"
+subtitle     = "A Hugo Theme"
+
+[markup.tableOfContents]
+endLevel   = 6
+ordered    = false
+startLevel = 1

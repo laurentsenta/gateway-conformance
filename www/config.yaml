@@ -1,0 +1,13 @@
+baseURL: http://example.org/
+languageCode: en-us
+title: Gateway Conformance Dashboard
+
+theme:
+  - conformance
+  - sk1
+
+taxonomies:
+  - name: IPIP
+    singular: IPIP
+    plural: IPIPs
+    slug: ipip

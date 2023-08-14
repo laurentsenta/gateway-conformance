@@ -127,4 +127,3 @@ Object.entries(groups).forEach(([test, group]) => {
 // output result to stdout
 const result = merged
 fs.writeFileSync(1, JSON.stringify(result, null, 2));
-
