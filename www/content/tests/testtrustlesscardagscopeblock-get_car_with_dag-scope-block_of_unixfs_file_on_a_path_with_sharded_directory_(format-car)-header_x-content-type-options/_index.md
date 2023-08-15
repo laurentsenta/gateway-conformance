@@ -1,0 +1,12 @@
+---
+slug: >-
+  testtrustlesscardagscopeblock-get_car_with_dag-scope-block_of_unixfs_file_on_a_path_with_sharded_directory_(format-car)-header_x-content-type-options
+name: Header X-Content-Type-Options
+full_name: >-
+  TestTrustlessCarDagScopeBlock/GET_CAR_with_dag-scope=block_of_UnixFS_file_on_a_path_with_sharded_directory_(format=car)/Header_X-Content-Type-Options
+versions:
+  - dev-44b0eaa-dirty
+  - v0.0.2
+title: Header X-Content-Type-Options
+---
+

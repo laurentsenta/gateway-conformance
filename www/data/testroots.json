@@ -5,7 +5,8 @@
       "v0.0.2"
     ],
     "name": "TestCors",
-    "full_name": "TestCors"
+    "full_name": "TestCors",
+    "slug": "testcors"
   },
   "TestDNSLinkGatewayUnixFSDirectoryListing": {
     "versions": [
@@ -13,7 +14,8 @@
       "v0.0.2"
     ],
     "name": "TestDNSLinkGatewayUnixFSDirectoryListing",
-    "full_name": "TestDNSLinkGatewayUnixFSDirectoryListing"
+    "full_name": "TestDNSLinkGatewayUnixFSDirectoryListing",
+    "slug": "testdnslinkgatewayunixfsdirectorylisting"
   },
   "TestDagPbConversion": {
     "versions": [
@@ -21,7 +23,8 @@
       "v0.0.2"
     ],
     "name": "TestDagPbConversion",
-    "full_name": "TestDagPbConversion"
+    "full_name": "TestDagPbConversion",
+    "slug": "testdagpbconversion"
   },
   "TestGatewayBlock": {
     "versions": [
@@ -29,7 +32,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayBlock",
-    "full_name": "TestGatewayBlock"
+    "full_name": "TestGatewayBlock",
+    "slug": "testgatewayblock"
   },
   "TestGatewayCache": {
     "versions": [
@@ -37,7 +41,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayCache",
-    "full_name": "TestGatewayCache"
+    "full_name": "TestGatewayCache",
+    "slug": "testgatewaycache"
   },
   "TestGatewayCacheWithIPNS": {
     "versions": [
@@ -45,7 +50,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayCacheWithIPNS",
-    "full_name": "TestGatewayCacheWithIPNS"
+    "full_name": "TestGatewayCacheWithIPNS",
+    "slug": "testgatewaycachewithipns"
   },
   "TestGatewayIPNSRecord": {
     "versions": [
@@ -53,7 +59,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayIPNSRecord",
-    "full_name": "TestGatewayIPNSRecord"
+    "full_name": "TestGatewayIPNSRecord",
+    "slug": "testgatewayipnsrecord"
   },
   "TestGatewayJSONCborAndIPNS": {
     "versions": [
@@ -61,7 +68,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayJSONCborAndIPNS",
-    "full_name": "TestGatewayJSONCborAndIPNS"
+    "full_name": "TestGatewayJSONCborAndIPNS",
+    "slug": "testgatewayjsoncborandipns"
   },
   "TestGatewayJsonCbor": {
     "versions": [
@@ -69,7 +77,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayJsonCbor",
-    "full_name": "TestGatewayJsonCbor"
+    "full_name": "TestGatewayJsonCbor",
+    "slug": "testgatewayjsoncbor"
   },
   "TestGatewaySubdomainAndIPNS": {
     "versions": [
@@ -77,7 +86,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewaySubdomainAndIPNS",
-    "full_name": "TestGatewaySubdomainAndIPNS"
+    "full_name": "TestGatewaySubdomainAndIPNS",
+    "slug": "testgatewaysubdomainandipns"
   },
   "TestGatewaySubdomains": {
     "versions": [
@@ -85,7 +95,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewaySubdomains",
-    "full_name": "TestGatewaySubdomains"
+    "full_name": "TestGatewaySubdomains",
+    "slug": "testgatewaysubdomains"
   },
   "TestGatewaySymlink": {
     "versions": [
@@ -93,7 +104,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewaySymlink",
-    "full_name": "TestGatewaySymlink"
+    "full_name": "TestGatewaySymlink",
+    "slug": "testgatewaysymlink"
   },
   "TestGatewayUnixFSFileRanges": {
     "versions": [
@@ -101,7 +113,8 @@
       "v0.0.2"
     ],
     "name": "TestGatewayUnixFSFileRanges",
-    "full_name": "TestGatewayUnixFSFileRanges"
+    "full_name": "TestGatewayUnixFSFileRanges",
+    "slug": "testgatewayunixfsfileranges"
   },
   "TestNativeDag": {
     "versions": [
@@ -109,7 +122,8 @@
       "v0.0.2"
     ],
     "name": "TestNativeDag",
-    "full_name": "TestNativeDag"
+    "full_name": "TestNativeDag",
+    "slug": "testnativedag"
   },
   "TestPathing": {
     "versions": [
@@ -117,7 +131,8 @@
       "v0.0.2"
     ],
     "name": "TestPathing",
-    "full_name": "TestPathing"
+    "full_name": "TestPathing",
+    "slug": "testpathing"
   },
   "TestPlainCodec": {
     "versions": [
@@ -125,7 +140,8 @@
       "v0.0.2"
     ],
     "name": "TestPlainCodec",
-    "full_name": "TestPlainCodec"
+    "full_name": "TestPlainCodec",
+    "slug": "testplaincodec"
   },
   "TestRedirectsFileSupport": {
     "versions": [
@@ -133,7 +149,8 @@
       "v0.0.2"
     ],
     "name": "TestRedirectsFileSupport",
-    "full_name": "TestRedirectsFileSupport"
+    "full_name": "TestRedirectsFileSupport",
+    "slug": "testredirectsfilesupport"
   },
   "TestRedirectsFileSupportWithDNSLink": {
     "versions": [
@@ -141,7 +158,8 @@
       "v0.0.2"
     ],
     "name": "TestRedirectsFileSupportWithDNSLink",
-    "full_name": "TestRedirectsFileSupportWithDNSLink"
+    "full_name": "TestRedirectsFileSupportWithDNSLink",
+    "slug": "testredirectsfilesupportwithdnslink"
   },
   "TestSubdomainGatewayDNSLinkInlining": {
     "versions": [
@@ -149,7 +167,8 @@
       "v0.0.2"
     ],
     "name": "TestSubdomainGatewayDNSLinkInlining",
-    "full_name": "TestSubdomainGatewayDNSLinkInlining"
+    "full_name": "TestSubdomainGatewayDNSLinkInlining",
+    "slug": "testsubdomaingatewaydnslinkinlining"
   },
   "TestTar": {
     "versions": [
@@ -157,7 +176,8 @@
       "v0.0.2"
     ],
     "name": "TestTar",
-    "full_name": "TestTar"
+    "full_name": "TestTar",
+    "slug": "testtar"
   },
   "TestTrustlessCarDagScopeAll": {
     "versions": [
@@ -165,7 +185,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarDagScopeAll",
-    "full_name": "TestTrustlessCarDagScopeAll"
+    "full_name": "TestTrustlessCarDagScopeAll",
+    "slug": "testtrustlesscardagscopeall"
   },
   "TestTrustlessCarDagScopeBlock": {
     "versions": [
@@ -173,7 +194,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarDagScopeBlock",
-    "full_name": "TestTrustlessCarDagScopeBlock"
+    "full_name": "TestTrustlessCarDagScopeBlock",
+    "slug": "testtrustlesscardagscopeblock"
   },
   "TestTrustlessCarDagScopeEntity": {
     "versions": [
@@ -181,7 +203,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarDagScopeEntity",
-    "full_name": "TestTrustlessCarDagScopeEntity"
+    "full_name": "TestTrustlessCarDagScopeEntity",
+    "slug": "testtrustlesscardagscopeentity"
   },
   "TestTrustlessCarEntityBytes": {
     "versions": [
@@ -189,7 +212,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarEntityBytes",
-    "full_name": "TestTrustlessCarEntityBytes"
+    "full_name": "TestTrustlessCarEntityBytes",
+    "slug": "testtrustlesscarentitybytes"
   },
   "TestTrustlessCarOrderAndDuplicates": {
     "versions": [
@@ -197,7 +221,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarOrderAndDuplicates",
-    "full_name": "TestTrustlessCarOrderAndDuplicates"
+    "full_name": "TestTrustlessCarOrderAndDuplicates",
+    "slug": "testtrustlesscarorderandduplicates"
   },
   "TestTrustlessCarPathing": {
     "versions": [
@@ -205,7 +230,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessCarPathing",
-    "full_name": "TestTrustlessCarPathing"
+    "full_name": "TestTrustlessCarPathing",
+    "slug": "testtrustlesscarpathing"
   },
   "TestTrustlessRaw": {
     "versions": [
@@ -213,7 +239,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessRaw",
-    "full_name": "TestTrustlessRaw"
+    "full_name": "TestTrustlessRaw",
+    "slug": "testtrustlessraw"
   },
   "TestTrustlessRawRanges": {
     "versions": [
@@ -221,7 +248,8 @@
       "v0.0.2"
     ],
     "name": "TestTrustlessRawRanges",
-    "full_name": "TestTrustlessRawRanges"
+    "full_name": "TestTrustlessRawRanges",
+    "slug": "testtrustlessrawranges"
   },
   "TestUnixFSDirectoryListing": {
     "versions": [
@@ -229,7 +257,8 @@
       "v0.0.2"
     ],
     "name": "TestUnixFSDirectoryListing",
-    "full_name": "TestUnixFSDirectoryListing"
+    "full_name": "TestUnixFSDirectoryListing",
+    "slug": "testunixfsdirectorylisting"
   },
   "TestUnixFSDirectoryListingOnSubdomainGateway": {
     "versions": [
@@ -237,6 +266,7 @@
       "v0.0.2"
     ],
     "name": "TestUnixFSDirectoryListingOnSubdomainGateway",
-    "full_name": "TestUnixFSDirectoryListingOnSubdomainGateway"
+    "full_name": "TestUnixFSDirectoryListingOnSubdomainGateway",
+    "slug": "testunixfsdirectorylistingonsubdomaingateway"
   }
 }

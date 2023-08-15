@@ -1,0 +1,12 @@
+---
+slug: >-
+  testnativedag-get_plain_json_codec_with_format-json_returns_same_payload_as_format-dag-json_but_with_plain_content-type-header_content-type
+full_name: >-
+  TestNativeDag/GET_plain_JSON_codec_with_format=json_returns_same_payload_as_format=dag-json_but_with_plain_Content-Type/Header_Content-Type
+outcome: pass
+title: >-
+  TestNativeDag/GET_plain_JSON_codec_with_format=json_returns_same_payload_as_format=dag-json_but_with_plain_Content-Type/Header_Content-Type
+implementation_id: kubo-ter
+version: v0.0.2
+---
+

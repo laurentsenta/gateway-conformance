@@ -7,7 +7,6 @@ theme:
   - sk1
 
 taxonomies:
-  - name: IPIP
-    singular: IPIP
-    plural: IPIPs
-    slug: ipip
+  ipip: ipips
+  test: tests
+  result: results

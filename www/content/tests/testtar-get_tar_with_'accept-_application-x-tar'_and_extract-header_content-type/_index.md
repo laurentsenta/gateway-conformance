@@ -1,0 +1,12 @@
+---
+slug: >-
+  testtar-get_tar_with_'accept-_application-x-tar'_and_extract-header_content-type
+name: Header Content-Type
+full_name: >-
+  TestTar/GET_TAR_with_'Accept:_application/x-tar'_and_extract/Header_Content-Type
+versions:
+  - dev-44b0eaa-dirty
+  - v0.0.2
+title: Header Content-Type
+---
+

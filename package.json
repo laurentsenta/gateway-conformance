@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "cborg": "^2.0.1",
+    "gray-matter": "^4.0.3",
     "multiformats": "^11.0.2",
     "sqlite3": "^5.1.6"
   },

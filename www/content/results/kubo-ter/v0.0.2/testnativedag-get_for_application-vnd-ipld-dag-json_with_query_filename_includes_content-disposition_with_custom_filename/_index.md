@@ -1,0 +1,12 @@
+---
+slug: >-
+  testnativedag-get_for_application-vnd-ipld-dag-json_with_query_filename_includes_content-disposition_with_custom_filename
+full_name: >-
+  TestNativeDag/GET_for_application/vnd.ipld.dag-json_with_query_filename_includes_Content-Disposition_with_custom_filename
+outcome: pass
+title: >-
+  TestNativeDag/GET_for_application/vnd.ipld.dag-json_with_query_filename_includes_Content-Disposition_with_custom_filename
+implementation_id: kubo-ter
+version: v0.0.2
+---
+
