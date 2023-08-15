@@ -115,10 +115,16 @@ const main = async () => {
     // List all the tests full names.
     const testsTaxonomyQuery = `
         SELECT DISTINCT
-            full_name,
-            name,
-            test_run_version
-        FROM TestResult
+            tr.full_name,
+            tr.name,
+            tr.test_run_version,
+            tm.key,
+            tm.value
+        FROM TestResult tr
+        LEFT JOIN TestMetadata tm
+            ON tm.test_run_implementation_id = tr.test_run_implementation_id
+            AND tm.test_run_version = tr.test_run_version
+            AND tm.test_full_name = tr.full_name
         ORDER BY full_name
     `;
     const testsTaxonomyRows = await all(testsTaxonomyQuery);
@@ -137,9 +143,17 @@ const main = async () => {
             };
         }
 
-        testsTaxonomy[full_name].versions.push(
-            test_run_version,
-        );
+        addUniq(testsTaxonomy[full_name].versions, test_run_version);
+
+        if (row.key !== null) {
+            const key = row.key + 's'; // taxonomies are plural
+
+            if (!testsTaxonomy[full_name][key]) {
+                testsTaxonomy[full_name][key] = [];
+            }
+            const value = JSON.parse(row.value);
+            addUniq(testsTaxonomy[full_name][key], value);
+        }
     }
 
     for (const test of Object.values(testsTaxonomy)) {
@@ -209,7 +223,45 @@ const main = async () => {
     }
 
     // Generate ipips taxonomies
-    // TODO
+    const ipipsTaxonomyQuery = `
+        SELECT DISTINCT
+            test_full_name AS full_name,
+            value AS ipip,
+            test_run_version AS version
+        FROM TestMetadata
+        WHERE key = 'ipip'
+        ORDER BY ipip, version, full_name
+    `;
+    const ipipsTaxonomyRows = await all(ipipsTaxonomyQuery);
+
+    const ipipsTaxonomy = {};
+    for (const row of ipipsTaxonomyRows) {
+        const { full_name, version } = row;
+        const ipip = JSON.parse(row.ipip);
+        const slug = slugify(ipip);
+
+        if (!ipipsTaxonomy[ipip]) {
+            ipipsTaxonomy[ipip] = {
+                slug,
+                ipip,
+                tests: [],
+            };
+        }
+
+        ipipsTaxonomy[ipip].tests.push({
+            full_name,
+            version,
+        });
+    }
+
+    for (const ipip of Object.values(ipipsTaxonomy)) {
+        outputFrontmatter(`content/ipips/${ipip.slug}/_index.md`, {
+            ...ipip,
+            title: ipip.ipip
+        });
+    }
+
+
 
     // Close the database connection when you're done
     db.close((err) => {
@@ -260,6 +312,12 @@ const outputFrontmatter = (p, data) => {
 
     const md = matter.stringify(content.content, content.data);
     fs.writeFileSync(fullPath, md);
+}
+
+const addUniq = (arr, value) => {
+    if (!arr.includes(value)) {
+        arr.push(value);
+    }
 }
 
 main()
