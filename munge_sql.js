@@ -1,9 +1,22 @@
+/**
+ * This script takes the munged JSON files and puts them into a SQLite database.
+ */
 const sqlite3 = require('sqlite3').verbose();
 const fs = require('fs');
 const util = require('util');
 
+// first parameter: the output database file
+// all the following parameters: the input json files
+const dbFile = process.argv[2];
+const files = process.argv.slice(3);
+
+if (!dbFile || files.length === 0) {
+    console.error("Usage: node munge_sql.js <output.db> <input1.json> <input2.json> ...");
+    process.exit(1);
+}
+
 const main = async () => {
-    let db = new sqlite3.Database('./munged/munged.db', (err) => {
+    let db = new sqlite3.Database(dbFile, (err) => {
         if (err) {
             console.error(err.message);
         }
@@ -68,16 +81,13 @@ const main = async () => {
         );
     `)
 
-    // list all the files in ./munged/*.json
-    let files = fs.readdirSync("./munged");
-    files = files.filter((file) => file.endsWith(".json"));
-
     for (const file of files) {
-        const implemId = file.replace(".json", "");
-        const content = JSON.parse(fs.readFileSync(`./munged/${file}`));
+        const implemId = file.split("/").slice(-1)[0].split(".")[0];
+        const content = JSON.parse(fs.readFileSync(file));
         const { TestMetadata, ...tests } = content;
 
-        const { version, time } = TestMetadata.meta;
+        const time = TestMetadata.time;
+        const { version } = TestMetadata.meta;
 
         await run(`
             INSERT INTO TestRun (implementation_id, version, time)
