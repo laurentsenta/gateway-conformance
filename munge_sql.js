@@ -35,7 +35,7 @@ const main = async () => {
 
             parent_test_full_name TEXT,
 
-            PRIMARY KEY (test_run_implementation_id, test_run_version, parent_test_full_name, full_name),
+            PRIMARY KEY (test_run_implementation_id, test_run_version, full_name),
 
             -- parent hierarchy
             FOREIGN KEY (test_run_implementation_id, test_run_version, parent_test_full_name)
@@ -46,6 +46,27 @@ const main = async () => {
                 REFERENCES TestRun (implementation_id, version)
         );
     `);
+
+    await run(`
+        CREATE TABLE IF NOT EXISTS TestMetadata (
+            test_run_implementation_id TEXT,
+            test_run_version TEXT,
+            test_full_name TEXT,
+
+            key TEXT,
+            value JSON,
+
+            PRIMARY KEY (test_run_implementation_id, test_run_version, test_full_name, key),
+
+            -- test run
+            FOREIGN KEY (test_run_implementation_id, test_run_version)
+                REFERENCES TestRun (implementation_id, version)
+
+            -- test result
+            FOREIGN KEY (test_run_implementation_id, test_run_version, test_full_name)
+                REFERENCES TestResult (test_run_implementation_id, test_run_version, full_name)
+        );
+    `)
 
     // list all the files in ./munged/*.json
     let files = fs.readdirSync("./munged");
@@ -80,6 +101,13 @@ const main = async () => {
                 INSERT INTO TestResult (test_run_implementation_id, test_run_version, full_name, name, outcome, parent_test_full_name)
                 VALUES (?, ?, ?, ?, ?, ?)
             `, [implemId, version, fullName, name, outcome, parentFullName]);
+
+            for (const [key, value] of Object.entries(test.meta ?? {})) {
+                await run(`
+                    INSERT INTO TestMetadata (test_run_implementation_id, test_run_version, test_full_name, key, value)
+                    VALUES (?, ?, ?, ?, ?)
+                `, [implemId, version, fullName, key, JSON.stringify(value)]);
+            }
         }
     }
 
